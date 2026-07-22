@@ -1,0 +1,1 @@
+../../../dotclaude_folder/skills/changelog-update/SKILL.md
