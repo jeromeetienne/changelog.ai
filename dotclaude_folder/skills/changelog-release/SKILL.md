@@ -19,14 +19,11 @@ does the mechanical move and link regeneration.
 
 ## The toolbelt CLI
 
-Deterministic operations run through the bundled CLI. In this repo
-(development), invoke it from the repo root as:
+Deterministic operations run through the bundled CLI:
 
 ```bash
-npm run changelog_ai -- <command> [args]
+npx @jetienne/changelog.ai <command> [args]
 ```
-
-Once the package is installed, `npx @jetienne/changelog.ai <command>` works the same.
 
 | Command | Purpose |
 |---|---|
@@ -36,7 +33,7 @@ Once the package is installed, `npx @jetienne/changelog.ai <command>` works the 
 
 ## Steps
 
-1. Run `changelog_ai -- validate` first — fix any problems before releasing.
+1. Run `npx @jetienne/changelog.ai validate` first — fix any problems before releasing.
 2. **Determine the version.** If the user gave one, use it. Otherwise look at
    what's in `Unreleased` and suggest a [Semantic Versioning](https://semver.org/)
    bump:
@@ -47,7 +44,7 @@ Once the package is installed, `npx @jetienne/changelog.ai <command>` works the 
    anything — don't guess silently.
 3. Cut the release:
    ```bash
-   npm run changelog_ai -- release 1.4.0
+   npx @jetienne/changelog.ai release 1.4.0
    ```
    (Add `--date YYYY-MM-DD` to backdate it, e.g. when reconstructing history.)
 4. **Validate + self-correct** (see below).
@@ -60,14 +57,14 @@ Once the package is installed, `npx @jetienne/changelog.ai <command>` works the 
    Never commit, tag, or push without the user confirming first.
 6. Print the release notes:
    ```bash
-   npm run changelog_ai -- show 1.4.0
+   npx @jetienne/changelog.ai show 1.4.0
    ```
    and offer to use them as-is for `gh release create -F -` or a similar
    release note post — but only publish/push if the user asks you to.
 
 ## Validate + self-correct (required after cutting the release)
 
-1. Run `changelog_ai -- validate`.
+1. Run `npx @jetienne/changelog.ai validate`.
 2. If it exits non-zero, read each reported problem and fix it.
 3. Repeat until it passes.
 
@@ -78,4 +75,4 @@ Once the package is installed, `npx @jetienne/changelog.ai <command>` works the 
   nothing to release.
 - If the repo URL can't be auto-detected and isn't passed explicitly, the
   release still gets cut, but its comparison link won't be generated;
-  `changelog_ai` says so in a warning.
+  `npx @jetienne/changelog.ai` says so in a warning.

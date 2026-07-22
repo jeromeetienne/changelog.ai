@@ -116,12 +116,12 @@ The skills call this CLI for the deterministic, non-AI work. You rarely run it
 by hand, but it's a normal Commander CLI:
 
 ```bash
-npm run changelog_ai -- init                                  # scaffold a fresh CHANGELOG.md
-npm run changelog_ai -- validate                              # check it; exits non-zero and lists problems
-npm run changelog_ai -- add -c Added -t "New --verbose flag." # insert one entry under Unreleased
-npm run changelog_ai -- release 1.4.0                         # cut a release from Unreleased
-npm run changelog_ai -- show 1.4.0                             # print a release's body (or "unreleased")
-npm run changelog_ai -- install .claude --mode symlink        # mirror the skills into .claude/ (uninstall to remove)
+npx @jetienne/changelog.ai init                                  # scaffold a fresh CHANGELOG.md
+npx @jetienne/changelog.ai validate                              # check it; exits non-zero and lists problems
+npx @jetienne/changelog.ai add -c Added -t "New --verbose flag." # insert one entry under Unreleased
+npx @jetienne/changelog.ai release 1.4.0                         # cut a release from Unreleased
+npx @jetienne/changelog.ai show 1.4.0                            # print a release's body (or "unreleased")
+npx @jetienne/changelog.ai install .claude --mode symlink        # mirror the skills into .claude/ (uninstall to remove)
 ```
 
 `validate` is the gate the skills run after every edit; every command reads

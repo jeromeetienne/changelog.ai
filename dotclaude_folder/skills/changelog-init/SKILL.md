@@ -20,14 +20,11 @@ the judgment calls (whether to overwrite, whether to backfill history).
 
 ## The toolbelt CLI
 
-Deterministic operations run through the bundled CLI. In this repo
-(development), invoke it from the repo root as:
+Deterministic operations run through the bundled CLI:
 
 ```bash
-npm run changelog_ai -- <command> [args]
+npx @jetienne/changelog.ai <command> [args]
 ```
-
-Once the package is installed, `npx @jetienne/changelog.ai <command>` works the same.
 
 | Command | Purpose |
 |---|---|
@@ -42,7 +39,7 @@ Once the package is installed, `npx @jetienne/changelog.ai <command>` works the 
    Never overwrite an existing changelog.
 2. Run:
    ```bash
-   npm run changelog_ai -- init
+   npx @jetienne/changelog.ai init
    ```
    This writes the standard header and an empty `Unreleased` section, and
    picks up the repo's GitHub URL automatically from `git remote` if there is
@@ -63,7 +60,7 @@ Once the package is installed, `npx @jetienne/changelog.ai <command>` works the 
 
 ## Validate + self-correct (required after every AI-driven edit)
 
-1. Run `changelog_ai -- validate`.
+1. Run `npx @jetienne/changelog.ai validate`.
 2. If it exits non-zero, read each reported problem (one per line) and fix the
    file — or better, redo the edit through `add`/`release` rather than
    hand-editing markdown, since those commands can't produce invalid output.

@@ -20,14 +20,11 @@ insertion and validation.
 
 ## The toolbelt CLI
 
-Deterministic operations run through the bundled CLI. In this repo
-(development), invoke it from the repo root as:
+Deterministic operations run through the bundled CLI:
 
 ```bash
-npm run changelog_ai -- <command> [args]
+npx @jetienne/changelog.ai <command> [args]
 ```
-
-Once the package is installed, `npx @jetienne/changelog.ai <command>` works the same.
 
 | Command | Purpose |
 |---|---|
@@ -57,14 +54,14 @@ The six categories, in the order they're always rendered: `Added`, `Changed`,
      near-duplicate of something already logged.
 3. Add each entry:
    ```bash
-   npm run changelog_ai -- add -c Added -t "Support exporting reports to CSV."
+   npx @jetienne/changelog.ai add -c Added -t "Support exporting reports to CSV."
    ```
 4. **Validate + self-correct** (see below).
 5. Summarize what you added (category by category) for the user.
 
 ## Validate + self-correct (required after every add)
 
-1. Run `changelog_ai -- validate`.
+1. Run `npx @jetienne/changelog.ai validate`.
 2. If it exits non-zero, read each reported problem and fix it — for a
    structural problem this usually means the file was hand-edited elsewhere;
    prefer fixing it through the CLI over hand-editing markdown.
