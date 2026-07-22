@@ -1,6 +1,6 @@
 {
 	"name": "@jetienne/changelog.ai",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"description": "Create and maintain a project's CHANGELOG.md in the Keep a Changelog format — driven by Claude skills on your Claude subscription, no metered API key.",
 	"type": "module",
 	"bin": {
