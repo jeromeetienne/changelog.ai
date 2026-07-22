@@ -6,6 +6,9 @@ Code skills** that run on your Claude subscription. No OpenAI, no metered API
 key: the reasoning is Claude itself, in your session; a small TypeScript
 toolbelt CLI does the deterministic work.
 
+New here? See [GETTING_STARTED.md](GETTING_STARTED.md) for a step-by-step
+walkthrough.
+
 ## Architecture
 
 - **Interface** — Claude skills in `dotclaude_folder/skills/`, mirrored into

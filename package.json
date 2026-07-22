@@ -11,7 +11,8 @@
 	"files": [
 		"dist",
 		"dotclaude_folder",
-		"LICENSE"
+		"LICENSE",
+		"GETTING_STARTED.md"
 	],
 	"engines": {
 		"node": ">=20.12"
