@@ -48,7 +48,7 @@ npm run install:dotclaude     # symlinks all three skills into ./.claude/
 To add the skills to a different project instead:
 
 ```bash
-npx changelog_ai install /path/to/project/.claude --mode copy
+npx @jetienne/changelog.ai install /path/to/project/.claude --mode copy
 ```
 
 ### 2. Start a changelog

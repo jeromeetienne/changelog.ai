@@ -1,5 +1,5 @@
 {
-	"name": "changelog.ai",
+	"name": "@jetienne/changelog.ai",
 	"version": "0.1.4",
 	"description": "Create and maintain a project's CHANGELOG.md in the Keep a Changelog format — driven by Claude skills on your Claude subscription, no metered API key.",
 	"type": "module",
@@ -23,13 +23,16 @@
 		"test": "node --import tsx --test 'tests/**/*.test.ts'",
 		"test:watch": "node --import tsx --test --watch 'tests/**/*.test.ts'",
 		"build": "tsc -p tsconfig.build.json",
-		"publish:all": "npm run build && npm version patch && npm publish"
+		"publish:all": "npm run build && npm version patch && npm publish --access=public"
 	},
 	"author": {
 		"name": "Jerome Etienne",
 		"email": "jerome.etienne@gmail.com"
 	},
 	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
 	"keywords": [
 		"claude-code",
 		"changelog",

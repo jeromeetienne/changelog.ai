@@ -27,7 +27,7 @@ Deterministic operations run through the bundled CLI. In this repo
 npm run changelog_ai -- <command> [args]
 ```
 
-Once the package is installed, `npx changelog_ai <command>` works the same.
+Once the package is installed, `npx @jetienne/changelog.ai <command>` works the same.
 
 | Command | Purpose |
 |---|---|
