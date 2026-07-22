@@ -1,3 +1,5 @@
+node_modules/
+
 # >>> universal-ai-config >>>
 /universal-ai-config.overrides.*
 .claude/rules/
