@@ -60,11 +60,11 @@ You can also point at a specific change directly:
 
 > Add to the changelog: fixed the crash when the export file is empty.
 
-## 5. Cut a release
+## 5. Make a release
 
 When you're ready to ship:
 
-> Cut a release.
+> Make a release.
 
 Claude looks at what's in `Unreleased`, suggests a version number
 ([semver](https://semver.org/): major for breaking changes, minor for new

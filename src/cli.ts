@@ -85,7 +85,7 @@ async function main(): Promise<void> {
 
 	program
 		.command('release')
-		.description('Cut a release: move Unreleased into a new dated version section')
+		.description('Make a release: move Unreleased into a new dated version section')
 		.argument('<version>', 'the version being released, as MAJOR.MINOR.PATCH')
 		.option('--date <date>', 'release date, YYYY-MM-DD (defaults to today)', new Date().toISOString().slice(0, 10))
 		.option('--repo-url <url>', 'repo base URL for comparison links (auto-detected from the git remote if omitted)')

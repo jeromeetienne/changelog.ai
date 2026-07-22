@@ -10,7 +10,7 @@ import { IsoDateSchema, SEMVER_PATTERN, UNRELEASED_VERSION, type ChangelogReleas
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-/** Outcome of cutting a release: the updated file text and any non-fatal warnings. */
+/** Outcome of making a release: the updated file text and any non-fatal warnings. */
 export type ReleaseResult = {
 	text: string;
 	warnings: string[];
@@ -23,7 +23,7 @@ export type ReleaseResult = {
  */
 export class ReleaseCommand {
 	/**
-	 * Cuts a release from the current `Unreleased` content.
+	 * Makes a release from the current `Unreleased` content.
 	 *
 	 * @param text The current `CHANGELOG.md` contents.
 	 * @param version The new version, as strict `MAJOR.MINOR.PATCH`.

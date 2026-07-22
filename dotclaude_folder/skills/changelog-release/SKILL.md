@@ -1,10 +1,10 @@
 ---
 name: changelog-release
 description: >
-  Cut a new release in CHANGELOG.md: move the Unreleased entries into a dated
+  Make a new release in CHANGELOG.md: move the Unreleased entries into a dated
   version section and regenerate the comparison links. Use this when the user
-  wants to cut a release, bump the version, or prepare release notes.
-  Triggers on: "cut a release", "release version X", "bump the version",
+  wants to make a release, bump the version, or prepare release notes.
+  Triggers on: "make a release", "release version X", "bump the version",
   "prepare a release". All AI steps run on the current Claude session — no
   OpenAI, no API key.
 ---

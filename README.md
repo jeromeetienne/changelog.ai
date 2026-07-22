@@ -31,7 +31,7 @@ output without a structured-output API.
 |---|---|
 | `changelog-init` | Create a fresh `CHANGELOG.md`; optional backfill from git history |
 | `changelog-update` | Add human-readable entries to `Unreleased` from recent commits or a described change |
-| `changelog-release` | Cut a release: move `Unreleased` into a dated version section, regenerate comparison links |
+| `changelog-release` | Make a release: move `Unreleased` into a dated version section, regenerate comparison links |
 
 ## Using it — the workflow
 
@@ -83,9 +83,9 @@ result:
 - Crash when the input file is empty.
 ```
 
-### 4. Cut a release
+### 4. Make a release
 
-> **Cut a release.**
+> **Make a release.**
 
 `changelog-release` reads what's in `Unreleased`, suggests the next
 [semver](https://semver.org/) version (major for breaking/`Removed`, minor
@@ -119,7 +119,7 @@ by hand, but it's a normal Commander CLI:
 npx @jetienne/changelog.ai init                                  # scaffold a fresh CHANGELOG.md
 npx @jetienne/changelog.ai validate                              # check it; exits non-zero and lists problems
 npx @jetienne/changelog.ai add -c Added -t "New --verbose flag." # insert one entry under Unreleased
-npx @jetienne/changelog.ai release 1.4.0                         # cut a release from Unreleased
+npx @jetienne/changelog.ai release 1.4.0                         # make a release from Unreleased
 npx @jetienne/changelog.ai show 1.4.0                            # print a release's body (or "unreleased")
 npx @jetienne/changelog.ai install .claude --mode symlink        # mirror the skills into .claude/ (uninstall to remove)
 ```
